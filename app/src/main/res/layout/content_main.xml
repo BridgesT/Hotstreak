@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3D73B5"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:layout_marginBottom="?android:attr/actionBarSize"
+    >
+
+    <Button
+        android:id="@+id/MadeButton"
+        android:layout_width="164dp"
+        android:layout_height="93dp"
+        android:background="@android:color/holo_green_dark"
+        android:onClick="UpdateMadeStreak"
+        android:text="Made"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/MissedButton"
+        app:layout_constraintHorizontal_bias="0.673"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.974"
+
+        />
+
+    <Button
+        android:id="@+id/MissedButton"
+        android:layout_width="164dp"
+        android:layout_height="93dp"
+        android:background="@android:color/holo_red_dark"
+        android:onClick="UpdateAttemptStreak"
+        android:text="Missed"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toEndOf="@+id/MadeButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.974"
+        />
+
+    <TextView
+        android:id="@+id/BestStreakText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="528dp"
+        android:text="Best Streak"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/currentStreak"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.99" />
+
+    <TextView
+        android:id="@+id/currentStreak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="568dp"
+        android:text="Current Streak"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/MadeButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <TextView
+        android:id="@+id/CurrentStreakHeader"
+        android:layout_width="389dp"
+        android:layout_height="72dp"
+        android:text="Hot Streak"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toTopOf="@+id/CurrentStreakText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias=".9"
+        />
+
+    <TextView
+        android:id="@+id/CurrentStreakText"
+        android:layout_width="394dp"
+        android:layout_height="189dp"
+        android:layout_marginBottom="192dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="120sp"
+        app:layout_constraintBaseline_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/BestStreakText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
